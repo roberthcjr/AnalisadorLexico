@@ -14,51 +14,47 @@ package src;
 
 program = program identifier body
 
-body = [declare decl-list] begin stmt-list end
+body = [declare declList] begin stmtList end
 
-"decl-list" = decl {";" decl}*
+declList = decl (";" decl)*
 
-decl = type ident-list
+decl = type identList
 
-ident-list = identifier {"," identifier}*
+identList = identifier ("," identifier)*
 
 type = integer | decimal
 
-stmt-list = stmt {";" stmt}
+stmtList = stmt (";" stmt)
 
-stmt = assign-stmt | if-stmt | while-stmt
+stmt = assignStmt | ifStmt | whileStmt | readStmt | writeStmt | doWhileStmt | forStmt
 
-| read-stmt | write-stmt
+assignStmt = identifier ":=" simpleExpr
 
-assign-stmt = identifier ":=" simple_expr
-
-if-stmt = if condition then stmt-list end
-
-| if condition then stmt-list else stmt-list end
+ifStmt = if condition then stmtList end | if condition then stmtList else stmtList end
 
 condition = expression
 
-do-while-stmt = do stmt-list stmt-suffix
+doWhileStmt = do stmtList stmtSuffix
 
-stmt-suffix = while condition
+stmtSuffix = while condition
 
-for-stmt = for assign-stmt to condition do stmt-list end //o for é opcional
+forStmt = for assignStmt to condition do stmtList end 
 
-while-stmt = while condition do stmt-list end // o while..do é opcional
+whileStmt = while condition do stmtList end 
 
-read-stmt = read "(" identifier ")"
+readStmt = read "(" identifier ")"
 
-write-stmt = write "(" writable ")"
+writeStmt = write "(" writable ")"
 
-writable = simple-expr | literal
+writable = simpleExpr | literal
 
-expression = simple-expr | simple-expr relop simple-expr
+expression = simpleExpr | simpleExpr relop simpleExpr
 
-simple-expr = term | simple-expr addop term | "(" simple-expr ")" ? simple-expr ":" simple-expr
+simpleExpr = term | simpleExpr addop term | "(" simpleExpr ")" ? simpleExpr ":" simpleExpr
 
-term = factor-a | term mulop factor-a
+term = factorA | term mulop factorA
 
-fator-a = factor | not factor | "-" factor
+factorA = factor | not factor | "-" factor
 
 factor = identifier | constant | "(" expression ")"
 
@@ -70,33 +66,53 @@ mulop = "*" | "/" | mod | and
 
 shiftop = "<<" | ">>" | "<<<" | ">>>"
 
-constant = digit {digit}*
+constant = digit (digit)*
 
-literal = " “" {caractere} "”"
+literal = " “" (caractere) "”"
 
-identifier = letter {letter | digit}*
+identifier = letter(letter|digit)*
 
-letter = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
+letter = [A-Z][a-z]
 
-| "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
-
-| "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d"
-
-| "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n"
-
-| "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x"
-
-| "y" | "z"
-
-digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+digit = [0-9]
 
 caractere = "~"
 
 %%
 
-"if"			{imprimir("Palavra reservada ", yytext());}
-"then"			{imprimir("Palavra reservada ", yytext());}
-{program}		{imprimir("Início do programa ", yytext());}
-{body}			{imprimir("O corpo do programa ", yytext());}
+
+{program} {imprimir("Programa", yytext());}
+{body} {imprimir("Corpo", yytext());}
+{declList} {imprimir("Lista de declaração", yytext());}
+{decl} {imprimir("Declaração", yytext());}
+{identList} {imprimir("Lista de identação", yytext());}
+{type} {imprimir("Tipos", yytext());}
+{stmtList} {imprimir("Operações de repetição", yytext());}
+{stmt} {imprimir("Operação de repetição", yytext());}
+{assignStmt} {imprimir("Operação de atribuição", yytext());}
+{ifStmt} {imprimir("Operação de condição", yytext());}
+{condition} {imprimir("Condição", yytext());}
+{doWhileStmt} {imprimir("Operação de DoWhile", yytext());}
+{stmtSuffix} {imprimir("Sufixo da operação", yytext());}
+{forStmt} {imprimir("Operação de repetição For", yytext());}
+{whileStmt} {imprimir("Operação de repetição While", yytext());}
+{readStmt} {imprimir("Operação de leitura", yytext());}
+{writeStmt} {imprimir("Operação de gravação", yytext());}
+{writable} {imprimir("Gravável", yytext());}
+{expression} {imprimir("Expressão", yytext());}
+{simpleExpr} {imprimir("Expressão simples", yytext());}
+{term} {imprimir("Termo", yytext());}
+{factorA} {imprimir("Fator A", yytext());}
+{factor} {imprimir("Fator", yytext());}
+{relop} {imprimir("Comparadores", yytext());}
+{addop} {imprimir("Adição", yytext());}
+{mulop} {imprimir("Multiplicação", yytext());}
+{shiftop} {imprimir("Shiftop", yytext());}
+{constant} {imprimir("Constante", yytext());}
+{literal} {imprimir("String Literal", yytext());}
+{identifier} {imprimir("Identificador", yytext());}
+{letter} {imprimir("Letra", yytext());}
+{digit} {imprimir("Digito", yytext());}
+{caractere} {imprimir("Caractere Especial", yytext());}
 
 . { throw new RuntimeException("Caractere invalido" + yytext()); }
