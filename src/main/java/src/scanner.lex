@@ -10,9 +10,9 @@ package src;
 %}
 
 %class AnalisadorLexico
-%type void
+%standalone
 
-program = program identifier body
+program = "program" identifier body
 
 body = [declare declList] begin stmtList end
 
@@ -72,11 +72,12 @@ literal = " “" (caractere) "”"
 
 identifier = letter(letter|digit)*
 
-letter = [A-Z][a-z]
+letter = [A-Za-z]
 
 digit = [0-9]
 
 caractere = "~"
+
 
 %%
 
