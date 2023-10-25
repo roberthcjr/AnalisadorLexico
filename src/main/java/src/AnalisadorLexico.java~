@@ -62,9 +62,8 @@ class AnalisadorLexico {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\11\0\2\1\1\2\2\1\22\0\1\1\17\0\12\3"+
-    "\7\0\32\4\6\0\32\4\3\0\1\5\6\0\1\2"+
-    "\u01a2\0\2\2\326\0\u0100\2";
+    "\11\0\2\1\1\2\2\1\22\0\1\1\135\0\1\3"+
+    "\6\0\1\2\u01a2\0\2\2\326\0\u0100\2";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -91,10 +90,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\3\1\4\1\5";
+    "\1\0\1\1\1\2\1\3\1\4";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[6];
+    int [] result = new int[5];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -119,10 +118,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\6\0\6\0\6\0\14\0\6";
+    "\0\0\0\4\0\4\0\4\0\4";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[6];
+    int [] result = new int[5];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -145,11 +144,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_TRANS = zzUnpacktrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\4\1\2\1\5\1\6\11\0\2\5"+
-    "\1\0";
+    "\1\2\1\3\1\4\1\5\4\0";
 
   private static int [] zzUnpacktrans() {
-    int [] result = new int[18];
+    int [] result = new int[8];
     int offset = 0;
     offset = zzUnpacktrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -192,10 +190,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\3\11\1\1\1\11";
+    "\1\0\4\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[6];
+    int [] result = new int[5];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -275,9 +273,9 @@ class AnalisadorLexico {
   /* user code: */
       TabelaDeSimbolos tabela = new TabelaDeSimbolos();
 
-      private void addToken(TiposDeToken type,String value) {
-        tabela.novaEntrada(type,value,yycolumn, yyline);
-      }
+//      private addToken(TiposDeToken type,String value) {
+//        tabela.novaEntrada(type, yyline, yycolumn, value);
+//      }
 
 
   /**
@@ -694,27 +692,22 @@ class AnalisadorLexico {
             { throw new RuntimeException("Caractere invalido" + yytext());
             }
           // fall through
-          case 6: break;
+          case 5: break;
           case 2:
             { 
             }
           // fall through
-          case 7: break;
+          case 6: break;
           case 3:
             { System.out.print(yytext());
             }
           // fall through
-          case 8: break;
+          case 7: break;
           case 4:
-            { addToken(TiposDeToken.IDENTIFICADOR, yytext()); System.out.print("Identificador "+ yytext());
-            }
-          // fall through
-          case 9: break;
-          case 5:
             { System.out.print("Caractere Especial "+ yytext());
             }
           // fall through
-          case 10: break;
+          case 8: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
