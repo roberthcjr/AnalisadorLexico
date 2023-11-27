@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 public class TesteALex {
 
-    public static String readFileReturnString(String filePath) throws IOException {
+    public static String readFileReturnString(String fileName) throws IOException {
         try {
-            File arquivo = new File(filePath);
+            ClassLoader classLoader = TesteALex.class.getClassLoader();
+
+            File arquivo = new File(classLoader.getResource(fileName).getFile());
 
             Scanner scanner = new Scanner(arquivo);
 
@@ -25,12 +27,11 @@ public class TesteALex {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return filePath;
+        return fileName;
     }
     public static void main(String[] args) throws IOException{
 
-        //Necessário pegar o absolute path
-        String teste = readFileReturnString("/home/robert/Workspace/Faculdade/AnalisadorLexico/src/main/java/src/testes/teste4.txt");
+        String teste = readFileReturnString("teste4.txt");
 
         AnalisadorLexico lexical = new AnalisadorLexico(new StringReader(teste));
         lexical.yylex();
