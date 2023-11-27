@@ -38,10 +38,10 @@ public enum TiposDeToken {
     OPERADOR_PART,
     LITERAL,
     COMMA,
-    PARENTHESIS,
+    LEFT_PARENTHESIS,
+    RIGHT_PARENTHESIS,
     SEMICOLON,
     CONSTANT,
-
 
     IDENTIFICADOR
 }

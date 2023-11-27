@@ -95,7 +95,8 @@ literal = {doubleQuote}[^\"]*{doubleQuote}
 {mult} {addToken(TiposDeToken.OPERADOR_MULT, yytext()); System.out.print("Operador "+ yytext() + "\n");}
 {part} {addToken(TiposDeToken.OPERADOR_PART, yytext()); System.out.print("Operador "+ yytext() + "\n");}
 {comma} {addToken(TiposDeToken.COMMA, yytext()); System.out.print("Operador "+ yytext() + "\n");}
-{parenthesis} {addToken(TiposDeToken.PARENTHESIS, yytext()); System.out.print("Parenteses \n");}
+{leftParenthesis} {addToken(TiposDeToken.LEFT_PARENTHESIS, yytext()); System.out.print("Operador "+ yytext() + "\n");}
+{rightParenthesis} {addToken(TiposDeToken.RIGHT_PARENTHESIS, yytext()); System.out.print("Operador "+ yytext() + "\n");}
 {semicolon} {addToken(TiposDeToken.SEMICOLON, yytext()); System.out.print("Ponto e vírgula \n");}
 {identifier} {addToken(TiposDeToken.IDENTIFICADOR, yytext()); System.out.print("Identificador "+ yytext() + "\n");}
 {constant} {addToken(TiposDeToken.CONSTANT, yytext()); System.out.print("Constante "+ yytext() + "\n");}
