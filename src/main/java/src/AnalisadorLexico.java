@@ -62,12 +62,12 @@ class AnalisadorLexico {
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
     "\11\0\2\1\1\2\2\1\22\0\1\1\1\0\1\3"+
-    "\2\0\1\4\2\0\2\5\1\6\1\7\1\10\1\11"+
-    "\1\0\1\12\12\13\1\14\1\15\1\16\1\17\1\20"+
-    "\2\0\32\21\6\0\1\22\1\23\1\24\1\25\1\26"+
-    "\1\27\1\30\1\31\1\32\2\21\1\33\1\34\1\35"+
-    "\1\36\1\37\1\21\1\40\1\41\1\42\2\21\1\43"+
-    "\3\21\12\0\1\2\u01a2\0\2\2\326\0\u0100\2";
+    "\2\0\1\4\2\0\1\5\1\6\1\7\1\10\1\11"+
+    "\1\12\1\0\1\13\12\14\1\15\1\16\1\17\1\20"+
+    "\1\21\2\0\32\22\6\0\1\23\1\24\1\25\1\26"+
+    "\1\27\1\30\1\31\1\32\1\33\2\22\1\34\1\35"+
+    "\1\36\1\37\1\40\1\22\1\41\1\42\1\43\2\22"+
+    "\1\44\3\22\12\0\1\2\u01a2\0\2\2\326\0\u0100\2";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -95,16 +95,16 @@ class AnalisadorLexico {
 
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\1\3\2\1\1\4\1\5\1\6"+
-    "\1\7\1\10\1\11\1\12\1\1\1\13\1\14\1\1"+
-    "\1\15\16\16\1\0\1\17\1\0\1\20\1\21\1\22"+
-    "\1\23\1\24\1\25\3\16\1\26\3\16\1\27\3\16"+
-    "\1\30\3\16\1\31\2\16\1\32\3\16\1\33\1\34"+
-    "\1\16\1\35\1\36\10\16\1\37\2\16\1\40\1\41"+
-    "\2\16\1\42\4\16\1\43\1\44\4\16\1\45\1\46"+
-    "\1\47\1\50";
+    "\1\7\1\10\1\11\1\12\1\13\1\1\1\14\1\15"+
+    "\1\1\1\16\16\17\1\0\1\20\1\0\1\21\1\22"+
+    "\1\23\1\24\1\25\1\26\3\17\1\27\3\17\1\30"+
+    "\3\17\1\31\3\17\1\32\2\17\1\33\3\17\1\34"+
+    "\1\35\1\17\1\36\1\37\10\17\1\40\2\17\1\41"+
+    "\1\42\2\17\1\43\4\17\1\44\1\45\4\17\1\46"+
+    "\1\47\1\50\1\51";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[98];
+    int [] result = new int[99];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -129,22 +129,22 @@ class AnalisadorLexico {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\44\0\44\0\44\0\110\0\154\0\44\0\44"+
-    "\0\44\0\44\0\44\0\44\0\220\0\264\0\44\0\330"+
-    "\0\374\0\u0120\0\u0144\0\u0168\0\u018c\0\u01b0\0\u01d4\0\u01f8"+
-    "\0\u021c\0\u0240\0\u0264\0\u0288\0\u02ac\0\u02d0\0\u02f4\0\u0318"+
-    "\0\110\0\44\0\154\0\154\0\44\0\44\0\44\0\44"+
-    "\0\44\0\u033c\0\u0360\0\u0384\0\u0144\0\u03a8\0\u03cc\0\u03f0"+
-    "\0\u0144\0\u0414\0\u0438\0\u045c\0\u0144\0\u0480\0\u04a4\0\u04c8"+
-    "\0\u0144\0\u04ec\0\u0510\0\u0144\0\u0534\0\u0558\0\u057c\0\u0144"+
-    "\0\u0144\0\u05a0\0\u0144\0\u0144\0\u05c4\0\u05e8\0\u060c\0\u0630"+
-    "\0\u0654\0\u0678\0\u069c\0\u06c0\0\u0144\0\u06e4\0\u0708\0\u0144"+
-    "\0\u0144\0\u072c\0\u0750\0\u0144\0\u0774\0\u0798\0\u07bc\0\u07e0"+
-    "\0\u0144\0\u0144\0\u0804\0\u0828\0\u084c\0\u0870\0\u0144\0\u0144"+
-    "\0\u0144\0\u0144";
+    "\0\0\0\45\0\45\0\45\0\112\0\157\0\45\0\45"+
+    "\0\45\0\45\0\45\0\45\0\45\0\224\0\271\0\45"+
+    "\0\336\0\u0103\0\u0128\0\u014d\0\u0172\0\u0197\0\u01bc\0\u01e1"+
+    "\0\u0206\0\u022b\0\u0250\0\u0275\0\u029a\0\u02bf\0\u02e4\0\u0309"+
+    "\0\u032e\0\112\0\45\0\157\0\157\0\45\0\45\0\45"+
+    "\0\45\0\45\0\u0353\0\u0378\0\u039d\0\u014d\0\u03c2\0\u03e7"+
+    "\0\u040c\0\u014d\0\u0431\0\u0456\0\u047b\0\u014d\0\u04a0\0\u04c5"+
+    "\0\u04ea\0\u014d\0\u050f\0\u0534\0\u014d\0\u0559\0\u057e\0\u05a3"+
+    "\0\u014d\0\u014d\0\u05c8\0\u014d\0\u014d\0\u05ed\0\u0612\0\u0637"+
+    "\0\u065c\0\u0681\0\u06a6\0\u06cb\0\u06f0\0\u014d\0\u0715\0\u073a"+
+    "\0\u014d\0\u014d\0\u075f\0\u0784\0\u014d\0\u07a9\0\u07ce\0\u07f3"+
+    "\0\u0818\0\u014d\0\u014d\0\u083d\0\u0862\0\u0887\0\u08ac\0\u014d"+
+    "\0\u014d\0\u014d\0\u014d";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[98];
+    int [] result = new int[99];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -169,54 +169,54 @@ class AnalisadorLexico {
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11"+
     "\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21"+
-    "\1\22\1\23\1\24\1\25\1\23\1\26\1\27\1\30"+
-    "\2\23\1\31\1\23\1\32\1\33\1\34\1\35\1\36"+
-    "\1\23\1\37\1\40\44\0\3\41\1\42\40\41\4\43"+
-    "\1\44\37\43\13\0\1\15\47\0\1\45\43\0\1\46"+
-    "\1\47\42\0\1\50\43\0\1\51\37\0\1\23\5\0"+
-    "\23\23\13\0\1\23\5\0\14\23\1\52\6\23\13\0"+
-    "\1\23\5\0\5\23\1\53\15\23\13\0\1\23\5\0"+
-    "\5\23\1\54\7\23\1\55\5\23\13\0\1\23\5\0"+
-    "\12\23\1\56\1\23\1\57\6\23\13\0\1\23\5\0"+
-    "\15\23\1\60\5\23\13\0\1\23\5\0\6\23\1\61"+
-    "\5\23\1\62\6\23\13\0\1\23\5\0\15\23\1\63"+
-    "\5\23\13\0\1\23\5\0\15\23\1\64\5\23\13\0"+
-    "\1\23\5\0\17\23\1\65\3\23\13\0\1\23\5\0"+
-    "\17\23\1\66\3\23\13\0\1\23\5\0\5\23\1\67"+
-    "\15\23\13\0\1\23\5\0\10\23\1\70\4\23\1\71"+
-    "\5\23\13\0\1\23\5\0\10\23\1\72\6\23\1\73"+
-    "\3\23\13\0\1\23\5\0\4\23\1\74\16\23\13\0"+
-    "\1\23\5\0\7\23\1\75\13\23\13\0\1\23\5\0"+
-    "\3\23\1\76\17\23\13\0\1\23\5\0\20\23\1\77"+
-    "\2\23\13\0\1\23\5\0\4\23\1\100\16\23\13\0"+
-    "\1\23\5\0\17\23\1\101\3\23\13\0\1\23\5\0"+
-    "\21\23\1\102\1\23\13\0\1\23\5\0\4\23\1\103"+
-    "\16\23\13\0\1\23\5\0\21\23\1\104\1\23\13\0"+
-    "\1\23\5\0\15\23\1\105\5\23\13\0\1\23\5\0"+
-    "\1\23\1\106\21\23\13\0\1\23\5\0\5\23\1\107"+
-    "\15\23\13\0\1\23\5\0\11\23\1\110\11\23\13\0"+
-    "\1\23\5\0\11\23\1\111\11\23\13\0\1\23\5\0"+
-    "\11\23\1\112\11\23\13\0\1\23\5\0\11\23\1\113"+
-    "\1\114\10\23\13\0\1\23\5\0\5\23\1\115\15\23"+
-    "\13\0\1\23\5\0\5\23\1\116\15\23\13\0\1\23"+
-    "\5\0\7\23\1\117\13\23\13\0\1\23\5\0\4\23"+
-    "\1\120\16\23\13\0\1\23\5\0\14\23\1\121\6\23"+
-    "\13\0\1\23\5\0\12\23\1\122\10\23\13\0\1\23"+
-    "\5\0\21\23\1\123\1\23\13\0\1\23\5\0\14\23"+
-    "\1\124\6\23\13\0\1\23\5\0\13\23\1\125\7\23"+
-    "\13\0\1\23\5\0\1\23\1\126\21\23\13\0\1\23"+
-    "\5\0\7\23\1\127\13\23\13\0\1\23\5\0\17\23"+
-    "\1\130\3\23\13\0\1\23\5\0\5\23\1\131\15\23"+
-    "\13\0\1\23\5\0\5\23\1\132\15\23\13\0\1\23"+
-    "\5\0\1\23\1\133\21\23\13\0\1\23\5\0\17\23"+
-    "\1\134\3\23\13\0\1\23\5\0\5\23\1\135\15\23"+
-    "\13\0\1\23\5\0\1\23\1\136\21\23\13\0\1\23"+
-    "\5\0\12\23\1\137\10\23\13\0\1\23\5\0\5\23"+
-    "\1\140\15\23\13\0\1\23\5\0\17\23\1\141\3\23"+
-    "\13\0\1\23\5\0\13\23\1\142\7\23";
+    "\1\22\1\23\1\24\1\25\1\26\1\24\1\27\1\30"+
+    "\1\31\2\24\1\32\1\24\1\33\1\34\1\35\1\36"+
+    "\1\37\1\24\1\40\1\41\45\0\3\42\1\43\41\42"+
+    "\4\44\1\45\40\44\14\0\1\16\50\0\1\46\44\0"+
+    "\1\47\1\50\43\0\1\51\44\0\1\52\40\0\1\24"+
+    "\5\0\23\24\14\0\1\24\5\0\14\24\1\53\6\24"+
+    "\14\0\1\24\5\0\5\24\1\54\15\24\14\0\1\24"+
+    "\5\0\5\24\1\55\7\24\1\56\5\24\14\0\1\24"+
+    "\5\0\12\24\1\57\1\24\1\60\6\24\14\0\1\24"+
+    "\5\0\15\24\1\61\5\24\14\0\1\24\5\0\6\24"+
+    "\1\62\5\24\1\63\6\24\14\0\1\24\5\0\15\24"+
+    "\1\64\5\24\14\0\1\24\5\0\15\24\1\65\5\24"+
+    "\14\0\1\24\5\0\17\24\1\66\3\24\14\0\1\24"+
+    "\5\0\17\24\1\67\3\24\14\0\1\24\5\0\5\24"+
+    "\1\70\15\24\14\0\1\24\5\0\10\24\1\71\4\24"+
+    "\1\72\5\24\14\0\1\24\5\0\10\24\1\73\6\24"+
+    "\1\74\3\24\14\0\1\24\5\0\4\24\1\75\16\24"+
+    "\14\0\1\24\5\0\7\24\1\76\13\24\14\0\1\24"+
+    "\5\0\3\24\1\77\17\24\14\0\1\24\5\0\20\24"+
+    "\1\100\2\24\14\0\1\24\5\0\4\24\1\101\16\24"+
+    "\14\0\1\24\5\0\17\24\1\102\3\24\14\0\1\24"+
+    "\5\0\21\24\1\103\1\24\14\0\1\24\5\0\4\24"+
+    "\1\104\16\24\14\0\1\24\5\0\21\24\1\105\1\24"+
+    "\14\0\1\24\5\0\15\24\1\106\5\24\14\0\1\24"+
+    "\5\0\1\24\1\107\21\24\14\0\1\24\5\0\5\24"+
+    "\1\110\15\24\14\0\1\24\5\0\11\24\1\111\11\24"+
+    "\14\0\1\24\5\0\11\24\1\112\11\24\14\0\1\24"+
+    "\5\0\11\24\1\113\11\24\14\0\1\24\5\0\11\24"+
+    "\1\114\1\115\10\24\14\0\1\24\5\0\5\24\1\116"+
+    "\15\24\14\0\1\24\5\0\5\24\1\117\15\24\14\0"+
+    "\1\24\5\0\7\24\1\120\13\24\14\0\1\24\5\0"+
+    "\4\24\1\121\16\24\14\0\1\24\5\0\14\24\1\122"+
+    "\6\24\14\0\1\24\5\0\12\24\1\123\10\24\14\0"+
+    "\1\24\5\0\21\24\1\124\1\24\14\0\1\24\5\0"+
+    "\14\24\1\125\6\24\14\0\1\24\5\0\13\24\1\126"+
+    "\7\24\14\0\1\24\5\0\1\24\1\127\21\24\14\0"+
+    "\1\24\5\0\7\24\1\130\13\24\14\0\1\24\5\0"+
+    "\17\24\1\131\3\24\14\0\1\24\5\0\5\24\1\132"+
+    "\15\24\14\0\1\24\5\0\5\24\1\133\15\24\14\0"+
+    "\1\24\5\0\1\24\1\134\21\24\14\0\1\24\5\0"+
+    "\17\24\1\135\3\24\14\0\1\24\5\0\5\24\1\136"+
+    "\15\24\14\0\1\24\5\0\1\24\1\137\21\24\14\0"+
+    "\1\24\5\0\12\24\1\140\10\24\14\0\1\24\5\0"+
+    "\5\24\1\141\15\24\14\0\1\24\5\0\17\24\1\142"+
+    "\3\24\14\0\1\24\5\0\13\24\1\143\7\24";
 
   private static int [] zzUnpacktrans() {
-    int [] result = new int[2196];
+    int [] result = new int[2257];
     int offset = 0;
     offset = zzUnpacktrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -259,11 +259,11 @@ class AnalisadorLexico {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\3\11\2\1\6\11\2\1\1\11\21\1\1\0"+
+    "\1\0\3\11\2\1\7\11\2\1\1\11\21\1\1\0"+
     "\1\11\1\0\1\1\5\11\71\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[98];
+    int [] result = new int[99];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -762,202 +762,207 @@ class AnalisadorLexico {
             { System.out.print("Caractere invalido" + yytext() + "\n");
             }
           // fall through
-          case 41: break;
+          case 42: break;
           case 2:
             { 
             }
           // fall through
-          case 42: break;
+          case 43: break;
           case 3:
             { System.out.print(yytext());
             }
           // fall through
-          case 43: break;
-          case 4:
-            { addToken(TiposDeToken.PARENTHESIS, yytext()); System.out.print("Parenteses \n");
-            }
-          // fall through
           case 44: break;
-          case 5:
-            { addToken(TiposDeToken.OPERADOR_MULT, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 4:
+            { addToken(TiposDeToken.LEFT_PARENTHESIS, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 45: break;
-          case 6:
-            { addToken(TiposDeToken.OPERADOR_ADD, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 5:
+            { addToken(TiposDeToken.RIGHT_PARENTHESIS, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 46: break;
-          case 7:
-            { addToken(TiposDeToken.COMMA, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 6:
+            { addToken(TiposDeToken.OPERADOR_MULT, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 47: break;
-          case 8:
-            { addToken(TiposDeToken.OPERADOR_MINUS, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 7:
+            { addToken(TiposDeToken.OPERADOR_ADD, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 48: break;
-          case 9:
-            { addToken(TiposDeToken.OPERADOR_PART, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 8:
+            { addToken(TiposDeToken.COMMA, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 49: break;
-          case 10:
-            { addToken(TiposDeToken.CONSTANT, yytext()); System.out.print("Constante "+ yytext() + "\n");
+          case 9:
+            { addToken(TiposDeToken.OPERADOR_MINUS, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 50: break;
-          case 11:
-            { addToken(TiposDeToken.SEMICOLON, yytext()); System.out.print("Ponto e vírgula \n");
+          case 10:
+            { addToken(TiposDeToken.OPERADOR_PART, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 51: break;
-          case 12:
-            { addToken(TiposDeToken.OPERADOR_LESS, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 11:
+            { addToken(TiposDeToken.CONSTANT, yytext()); System.out.print("Constante "+ yytext() + "\n");
             }
           // fall through
           case 52: break;
-          case 13:
-            { addToken(TiposDeToken.OPERADOR_GREAT, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 12:
+            { addToken(TiposDeToken.SEMICOLON, yytext()); System.out.print("Ponto e vírgula \n");
             }
           // fall through
           case 53: break;
-          case 14:
-            { addToken(TiposDeToken.IDENTIFICADOR, yytext()); System.out.print("Identificador "+ yytext() + "\n");
+          case 13:
+            { addToken(TiposDeToken.OPERADOR_LESS, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 54: break;
-          case 15:
-            { addToken(TiposDeToken.LITERAL, yytext()); System.out.print("Literal "+ yytext() + "\n");
+          case 14:
+            { addToken(TiposDeToken.OPERADOR_GREAT, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 55: break;
-          case 16:
-            { System.out.print("Comentário "+ yytext() + "\n");
+          case 15:
+            { addToken(TiposDeToken.IDENTIFICADOR, yytext()); System.out.print("Identificador "+ yytext() + "\n");
             }
           // fall through
           case 56: break;
-          case 17:
-            { addToken(TiposDeToken.OPERADOR_ASSIGN, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 16:
+            { addToken(TiposDeToken.LITERAL, yytext()); System.out.print("Literal "+ yytext() + "\n");
             }
           // fall through
           case 57: break;
-          case 18:
-            { addToken(TiposDeToken.OPERADOR_LESSEQUAL, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 17:
+            { System.out.print("Comentário "+ yytext() + "\n");
             }
           // fall through
           case 58: break;
-          case 19:
-            { addToken(TiposDeToken.OPERADOR_DIFFERENT, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 18:
+            { addToken(TiposDeToken.OPERADOR_ASSIGN, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 59: break;
-          case 20:
-            { addToken(TiposDeToken.OPERADOR_EQUAL, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 19:
+            { addToken(TiposDeToken.OPERADOR_LESSEQUAL, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 60: break;
-          case 21:
-            { addToken(TiposDeToken.OPERADOR_GREATEQUAL, yytext()); System.out.print("Operador "+ yytext() + "\n");
+          case 20:
+            { addToken(TiposDeToken.OPERADOR_DIFFERENT, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 61: break;
-          case 22:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_DO, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 21:
+            { addToken(TiposDeToken.OPERADOR_EQUAL, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 62: break;
-          case 23:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_IF, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 22:
+            { addToken(TiposDeToken.OPERADOR_GREATEQUAL, yytext()); System.out.print("Operador "+ yytext() + "\n");
             }
           // fall through
           case 63: break;
-          case 24:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_OR, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 23:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_DO, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 64: break;
-          case 25:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_TO, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 24:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_IF, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 65: break;
-          case 26:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_AND, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 25:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_OR, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 66: break;
-          case 27:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_END, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 26:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_TO, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 67: break;
-          case 28:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_FOR, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 27:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_AND, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 68: break;
-          case 29:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_MOD, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 28:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_END, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 69: break;
-          case 30:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_NOT, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 29:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_FOR, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 70: break;
-          case 31:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_ELSE, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 30:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_MOD, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 71: break;
-          case 32:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_READ, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 31:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_NOT, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 72: break;
-          case 33:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_THEN, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 32:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_ELSE, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 73: break;
-          case 34:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_BEGIN, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 33:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_READ, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 74: break;
-          case 35:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_WHILE, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 34:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_THEN, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 75: break;
-          case 36:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_WRITE, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 35:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_BEGIN, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 76: break;
-          case 37:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_DECIMAL, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 36:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_WHILE, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 77: break;
-          case 38:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_DECLARE, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 37:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_WRITE, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 78: break;
-          case 39:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_INTEGER, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 38:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_DECIMAL, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 79: break;
-          case 40:
-            { addToken(TiposDeToken.PALAVRA_RESERVADA_PROGRAM, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+          case 39:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_DECLARE, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
             }
           // fall through
           case 80: break;
+          case 40:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_INTEGER, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+            }
+          // fall through
+          case 81: break;
+          case 41:
+            { addToken(TiposDeToken.PALAVRA_RESERVADA_PROGRAM, yytext()); System.out.print("Palavra Reservada "+ yytext() + "\n");
+            }
+          // fall through
+          case 82: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
