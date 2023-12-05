@@ -57,6 +57,10 @@ rightParenthesis = ")"
 semicolon = ";"
 doubleQuote = "\""
 literal = {doubleQuote}[^\"]*{doubleQuote}
+rightShift = ">>"
+leftShift = "<<"
+unsignedRightShift = ">>>"
+unsignedLeftShift = "<<<"
 
 
 
@@ -97,6 +101,10 @@ literal = {doubleQuote}[^\"]*{doubleQuote}
 {comma} {addToken(TiposDeToken.COMMA, yytext()); System.out.print("Operador "+ yytext() + "\n");}
 {leftParenthesis} {addToken(TiposDeToken.LEFT_PARENTHESIS, yytext()); System.out.print("Operador "+ yytext() + "\n");}
 {rightParenthesis} {addToken(TiposDeToken.RIGHT_PARENTHESIS, yytext()); System.out.print("Operador "+ yytext() + "\n");}
+{rightShift} {addToken(TiposDeToken.OPERADOR_RIGHT_SHIFT, yytext()); System.out.print("Operador "+ yytext() + "\n");}
+{leftShift} {addToken(TiposDeToken.OPERADOR_LEFT_SHIFT, yytext()); System.out.print("Operador "+ yytext() + "\n");}
+{unsignedLeftShift} {addToken(TiposDeToken.OPERADOR_UNSIGNED_LEFT_SHIFT, yytext()); System.out.print("Operador "+ yytext() + "\n");}
+{unsignedRightShift} {addToken(TiposDeToken.OPERADOR_UNSIGNED_RIGHT_SHIFT, yytext()); System.out.print("Operador "+ yytext() + "\n");}
 {semicolon} {addToken(TiposDeToken.SEMICOLON, yytext()); System.out.print("Ponto e vírgula \n");}
 {identifier} {addToken(TiposDeToken.IDENTIFICADOR, yytext()); System.out.print("Identificador "+ yytext() + "\n");}
 {constant} {addToken(TiposDeToken.CONSTANT, yytext()); System.out.print("Constante "+ yytext() + "\n");}
